@@ -1,0 +1,14 @@
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.env
+.env.local
+storage/
+.venv/
+venv/
+
+# 个人会话不落库（克隆后由运行时自动生成 JSON）
+backend/sessions/*
+!backend/sessions/.gitkeep
+!backend/sessions/README.md
