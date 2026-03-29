@@ -37,3 +37,9 @@ DANGEROUS_COMMANDS = [
     "shutdown", "reboot", "halt", "poweroff",
     "format c:", "del /f /s /q c:\\",
 ]
+
+# Docker 沙箱配置（设 SANDBOX_ENABLED=true 启用容器隔离执行）
+SANDBOX_ENABLED = os.getenv("SANDBOX_ENABLED", "false").lower() == "true"
+SANDBOX_IMAGE = os.getenv("SANDBOX_IMAGE", "mini-openclaw-sandbox")
+SANDBOX_CONTAINER_NAME = os.getenv("SANDBOX_CONTAINER_NAME", "mini-openclaw-sandbox")
+SANDBOX_EXECUTOR_PORT = int(os.getenv("SANDBOX_EXECUTOR_PORT", "9999"))
